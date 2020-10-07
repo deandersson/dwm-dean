@@ -1,18 +1,18 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int gappx     = 20;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Roboto Mono Nerd Font:style=Medium:antialias=true:autohint=true:pixelsize=15" };
 static const char dmenufont[]       = "Roboto Mono Nerd Font:style=Medium:antialias=true:autohint=true:pixelsize=15";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_gray1[]       = "#505A60"; // Deselected background
+static const char col_gray2[]       = "#5B5C52"; // Deselected border
+static const char col_gray3[]       = "#D8CAAC"; // Not selected text, contrast to dark background
+static const char col_gray4[]       = "#D8CAAC"; // Light text, contrast to light background
+static const char col_cyan[]        = "#4F5D52"; // Selected color and border
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
