@@ -15,7 +15,7 @@ static const char *altbarcmd        = "$HOME/bar.sh"; /* Alternate bar launch co
 static const int usealtbar          = 0;        /* 1 means use non-dwm status bar */
 static const char *fonts[]          = { "Roboto Mono Nerd Font:style=Medium:antialias=true:autohint=true:pixelsize=15" };
 static const char dmenufont[]       = "Roboto Mono Nerd Font:style=Medium:antialias=true:autohint=true:pixelsize=15";
-static const char col_gray1[]       = "#505A60"; // Deselected background
+static const char col_gray1[]       = "#323D43"; // Deselected background
 static const char col_gray2[]       = "#5B5C52"; // Deselected border
 static const char col_gray3[]       = "#D8CAAC"; // Not selected text, contrast to dark background
 static const char col_gray4[]       = "#D8CAAC"; // Light text, contrast to light background
@@ -40,6 +40,7 @@ static const Rule rules[] = {
  	{ "qBittorrent",  NULL,       NULL,        1 << 7,       0,           1 },
  	{ "Gnome-calculator",  NULL,       NULL,        0,       1,           -1 },
  	{ "discord",  NULL,       NULL,        1 << 6,       0,           1 },
+ 	{ "Zotero",  "Toplevel",       NULL,        0,       1,           -1 },
 };
 
 /* layout(s) */
