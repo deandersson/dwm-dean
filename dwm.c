@@ -789,7 +789,7 @@ drawbar(Monitor *m)
                 char ctmp;
 
                 drw_setscheme(drw, scheme[SchemeNorm]);
-                x = drw_text(drw, m->ww - wstext, 0, lrpad / 2, bh, 0, "", 0); /* to keep left padding clean */
+                x = drw_text(drw, m->ww - wstext - 2 * sp, 0, lrpad / 2, bh, 0, "", 0); /* to keep left padding clean */
                 for (;;) {
                         if ((unsigned char)*ts > LENGTH(colors) + 10) {
                                 ts++;
