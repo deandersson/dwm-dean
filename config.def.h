@@ -20,7 +20,7 @@ static const char col_gray2[]       = "#5B5C52"; // Deselected border
 static const char col_gray3[]       = "#D8CAAC"; // Not selected text, contrast to dark background
 static const char col_gray4[]       = "#D8CAAC"; // Light text, contrast to light background
 static const char col_cyan[]        = "#4F5D52"; // Selected color and border
-static const char col1[]            = "#ffffff";
+static const char col1[]            = "#E68183";
 static const char col2[]            = "#ffffff";
 static const char col3[]            = "#ffffff";
 static const char col4[]            = "#ffffff";
@@ -65,6 +65,7 @@ static const Rule rules[] = {
  	{ "Gnome-calculator",  NULL,       NULL,        0,       1,           -1 },
  	{ "discord",  NULL,       NULL,        1 << 6,       0,           1 },
  	{ "Zotero",  "Toplevel",       NULL,        0,       1,           -1 },
+ 	{ "Steam",  "Steam",       "Friends List",        0,       1,           -1 },
 };
 
 /* layout(s) */
@@ -83,6 +84,9 @@ static const Layout layouts[] = {
 static const char *upvol[]   = { "/home/andersson/.local/scripts/volumeControl.sh", "1", NULL };
 static const char *downvol[] = { "/home/andersson/.local/scripts/volumeControl.sh", "2", NULL };
 static const char *mutevol[] = { "/home/andersson/.local/scripts/volumeControl.sh", "3", NULL };
+
+/* Printscreen shortcuts */
+static const char *captureRegion[] = { "/home/andersson/.local/scripts/screenCapture.sh", "1", NULL };
 
 /* key definitions */
 #define MODKEY Mod4Mask
@@ -138,9 +142,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
- 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
- 	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
- 	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+ 	{ 0,                       	XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+ 	{ 0,                       	XF86XK_AudioMute, spawn, {.v = mutevol } },
+ 	{ 0,                       	XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+ 	{ 0,                       	XK_Print, spawn, 	{.v = captureRegion   } },
 };
 
 /* button definitions */
